@@ -981,7 +981,7 @@ section { position: relative; }
 .value-item .big-num span { color: var(--red); }
 .value-item .big-label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-dark); margin-top: 8px; }
 
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
 .team-card { text-align: center; }
 .team-photo {
   aspect-ratio: 3/3.4;
