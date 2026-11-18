@@ -72,29 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* Shop filters */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('[data-category]');
-  if (filterBtns.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.getAttribute('data-filter');
-        productCards.forEach(card => {
-          const match = cat === 'all' || card.getAttribute('data-category') === cat;
-          card.style.display = match ? '' : 'none';
-        });
-      });
-    });
-  }
+  /* Shop filters are bound in js/products.js after products load. */
 
   /* "Inquire" buttons -> prefill quote form via query string */
-  document.querySelectorAll('[data-quote-product]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const product = btn.getAttribute('data-quote-product');
-      window.location.href = 'quote.html?product=' + encodeURIComponent(product);
-    });
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-quote-product]');
+    if (!btn) return;
+    window.location.href = 'quote.html?product=' + encodeURIComponent(btn.getAttribute('data-quote-product'));
   });
 
   /* Quote / contact form handling — submits via FormSubmit.co, no custom backend needed */

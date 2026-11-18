@@ -1257,3 +1257,33 @@ section { position: relative; }
 @media (max-width: 560px) {
   .anycar-actions .btn { flex: 1 1 100%; }
 }
+
+/* =========================================================
+   CATALOGUE (products.js): sale prices + site-wide sale bar
+   ========================================================= */
+.product-price .price-was { color: var(--muted-dark); font-size: .78em; margin-right: 6px; text-decoration-thickness: 1px; }
+.product-price .price-now { color: #ff4d52; }
+.pm-price .price-was { color: var(--muted-dark); font-size: .7em; margin-right: 8px; }
+.pm-price .price-now { color: #ff4d52; }
+.product-card.is-sale .product-badge { background: #fff; color: var(--red); }
+.products-error { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 40px 0; }
+.products-error a { color: #fff; text-decoration: underline; }
+
+.sale-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1001; height: 38px;
+  display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0 16px;
+  background: var(--red-grad); color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+  white-space: nowrap; overflow: hidden;
+}
+.sale-bar span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; }
+.sale-bar-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; flex: none; animation: saleDot 1.6s ease-in-out infinite; }
+@keyframes saleDot { 50% { opacity: .25; } }
+.sale-bar-cta { flex: none; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.4); opacity: .9; }
+a.sale-bar:hover .sale-bar-cta { opacity: 1; }
+body.has-sale-bar { padding-top: 38px; }
+body.has-sale-bar .site-header { top: 38px; }
+@media (max-width: 560px) {
+  .sale-bar { font-size: 11.5px; letter-spacing: .08em; gap: 8px; }
+  .sale-bar-cta { display: none; }
+}

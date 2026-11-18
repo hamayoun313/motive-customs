@@ -35,10 +35,10 @@
     catEl.textContent = cat ? cat.textContent : '';
     titleEl.textContent = title ? title.textContent : '';
     descEl.textContent = detail;
-    priceEl.textContent = price ? price.textContent : '';
+    priceEl.innerHTML = price ? price.innerHTML : '';
 
     state.baseName = inquireSrc ? inquireSrc.getAttribute('data-quote-product') : (title ? title.textContent : '');
-    state.basePrice = price ? price.textContent : '';
+    state.basePrice = price ? price.textContent.replace(/\s+/g, ' ').trim() : '';
     state.qty = 1;
     state.inquireUrl = card.getAttribute('data-inquire-url');
     inquireBtn.textContent = state.inquireUrl ? 'Customise My Car' : inquireLabel;
@@ -78,11 +78,19 @@
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.product-card').forEach(function (card) {
-    card.addEventListener('click', function (e) {
-      if (e.target.closest('[data-quote-product], a[href]')) return; // let the existing Inquire button behave as before
-      openModal(card);
-    });
+  // Cards are drawn by products.js, so listen on the document.
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest('#product-grid .product-card');
+    if (!card || e.target.closest('[data-quote-product], a[href]')) return;
+    openModal(card);
+  });
+
+  // Deep link from the home page: shop.html?p=<product id>
+  document.addEventListener('products:rendered', function () {
+    var id = new URLSearchParams(window.location.search).get('p');
+    if (!id) return;
+    var card = document.querySelector('#product-grid .product-card[data-id="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+    if (card) { card.scrollIntoView({ block: 'center' }); openModal(card); }
   });
 
   closeBtn.addEventListener('click', closeModal);
