@@ -30,6 +30,7 @@
 
     imgEl.src = img ? img.src : '';
     imgEl.alt = title ? title.textContent : '';
+    imgEl.parentNode.classList.toggle('pm-contain', card.getAttribute('data-img-fit') === 'contain');
     catEl.textContent = cat ? cat.textContent : '';
     titleEl.textContent = title ? title.textContent : '';
     descEl.textContent = detail;
