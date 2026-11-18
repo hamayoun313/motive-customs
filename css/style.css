@@ -1150,3 +1150,110 @@ section { position: relative; }
   .pm-overlay { padding: 0; }
   .pm-modal { max-width: 100%; min-height: 100vh; }
 }
+
+/* =========================================================
+   CUSTOMISE MY CAR (customise.html)
+   ========================================================= */
+.cz-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; align-items: start; }
+.cz-panel { padding: 40px; scroll-margin-top: 110px; }
+.cz-panel fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.cz-progress { list-style: none; margin: 0 0 36px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; counter-reset: none; }
+.cz-progress li { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 2px solid var(--line); color: var(--muted-dark); transition: border-color .3s, color .3s; }
+.cz-progress li span { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-family: 'Oswald', sans-serif; font-size: 12px; }
+.cz-progress li em { font-style: normal; font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.cz-progress li.active { border-top-color: var(--red); color: #fff; }
+.cz-progress li.active span { background: var(--red); border-color: var(--red); color: #fff; }
+.cz-progress li.done { border-top-color: rgba(214,31,38,.45); color: var(--muted); }
+.cz-progress li.done span { border-color: rgba(214,31,38,.6); color: var(--red); }
+.cz-panel:has(.form-success.show) .cz-progress { display: none; }
+
+.cz-step { display: none; }
+.cz-step.active { display: block; animation: czIn .45s var(--ease); }
+@keyframes czIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.cz-step-title { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .04em; font-size: clamp(22px, 2.6vw, 30px); color: #fff; font-weight: 600; padding: 0; margin-bottom: 8px; }
+.cz-step-sub { font-size: 14.5px; margin-bottom: 28px; }
+
+.cz-group + .cz-group { margin-top: 26px; }
+.cz-group-title { font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.cz-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.cz-tile { position: relative; cursor: pointer; display: block; }
+.cz-tile input, .cz-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.cz-tile-box { position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 16px 44px 16px 16px; background: #0d0d0e; border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .25s, background .25s, transform .25s var(--ease); }
+.cz-tile:hover .cz-tile-box { border-color: #4a4a50; transform: translateY(-2px); }
+.cz-tile-name { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: #fff; }
+.cz-tile-sub { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+.cz-tile-check { position: absolute; top: 14px; right: 14px; width: 20px; height: 20px; border: 1px solid #4a4a50; border-radius: 50%; display: grid; place-items: center; transition: all .25s; }
+.cz-tile-check svg { width: 11px; height: 11px; color: #fff; opacity: 0; transition: opacity .2s; }
+.cz-tile input:checked + .cz-tile-box { border-color: var(--red); background: linear-gradient(160deg, rgba(214,31,38,.16), rgba(214,31,38,.03) 60%), #0d0d0e; }
+.cz-tile input:checked + .cz-tile-box .cz-tile-check { background: var(--red); border-color: var(--red); }
+.cz-tile input:checked + .cz-tile-box .cz-tile-check svg { opacity: 1; }
+.cz-tile input:focus-visible + .cz-tile-box, .cz-chip input:focus-visible + span { outline: 2px solid var(--red); outline-offset: 2px; }
+
+.cz-step .form-group.full + .form-group.full { margin-top: 22px; }
+.cz-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.cz-chip { cursor: pointer; }
+.cz-chip span { display: inline-block; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: #0d0d0e; font-size: 13px; color: var(--muted); transition: all .2s; }
+.cz-chip:hover span { border-color: #4a4a50; color: #fff; }
+.cz-chip input:checked + span { background: var(--red); border-color: var(--red); color: #fff; }
+
+.cz-hint { min-height: 1.4em; margin: 22px 0 0; font-size: 13.5px; color: #ff9a9d; }
+.cz-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; }
+.cz-nav .btn { min-width: 150px; }
+
+.cz-summary { position: sticky; top: 110px; }
+.cz-summary-inner { background: linear-gradient(170deg, #1c1c20, #111113 70%); border: 1px solid var(--line); border-top: 2px solid var(--red); padding: 30px 28px; }
+.cz-summary .eyebrow { margin-bottom: 14px; }
+.cz-sum-car { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .04em; font-size: 22px; color: #fff; line-height: 1.2; margin-bottom: 22px; }
+.cz-sum-label { font-family: 'Oswald', sans-serif; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted-dark); margin-bottom: 8px; }
+.cz-sum-list { margin-bottom: 20px; }
+.cz-sum-list li { position: relative; padding: 7px 0 7px 16px; font-size: 14px; color: #e4e4e6; border-bottom: 1px solid rgba(255,255,255,.05); }
+.cz-sum-list li::before { content: ''; position: absolute; left: 0; top: 50%; width: 6px; height: 6px; margin-top: -3px; background: var(--red); }
+.cz-sum-list li.empty { color: var(--muted-dark); padding-left: 0; }
+.cz-sum-list li.empty::before { display: none; }
+.cz-sum-points { border-top: 1px solid var(--line); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.cz-sum-points li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.cz-sum-points svg { width: 14px; height: 14px; color: var(--red); flex: none; }
+
+@media (max-width: 980px) {
+  .cz-layout { grid-template-columns: 1fr; }
+  .cz-summary { position: static; }
+  .cz-summary-inner { padding: 22px; }
+  .cz-sum-points { display: none; }
+}
+@media (max-width: 760px) {
+  .cz-panel { padding: 24px 18px; }
+  .cz-progress em { display: none; }
+  .cz-progress li { justify-content: center; }
+  .cz-tiles { grid-template-columns: 1fr 1fr; }
+  .cz-tile-box { padding: 14px 34px 14px 12px; }
+  .cz-tile-check { top: 12px; right: 10px; }
+  .cz-tile-name { font-size: 13.5px; }
+  .cz-tile-sub { font-size: 11.5px; }
+  .cz-nav .btn { min-width: 0; flex: 1; padding-left: 16px; padding-right: 16px; }
+}
+
+/* =========================================================
+   ANY MAKE · ANY MODEL banner (home)
+   ========================================================= */
+.anycar { position: relative; overflow: hidden; padding: 84px 0; background: radial-gradient(120% 140% at 100% 0%, rgba(214,31,38,.22), transparent 55%), linear-gradient(180deg, #0c0c0d, #070708); border-bottom: 1px solid var(--line); }
+.anycar::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 1px, transparent 1px 60px); pointer-events: none; }
+.anycar .container { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.anycar h2 { font-size: clamp(34px, 5vw, 64px); color: #fff; line-height: 1.02; }
+.anycar h2 span { color: var(--red); }
+.anycar-lead { font-size: 17px; margin: 20px 0 30px; max-width: 520px; }
+.anycar-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.anycar-brands { display: flex; flex-wrap: wrap; gap: 10px; }
+.anycar-brands span { padding: 11px 18px; border: 1px solid var(--line); background: rgba(255,255,255,.02); font-family: 'Oswald', sans-serif; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; color: #d8d8db; transition: border-color .25s, color .25s; }
+.anycar-brands span:hover { border-color: var(--red); color: #fff; }
+.anycar-brands span.more { border-color: var(--red); color: #fff; background: rgba(214,31,38,.12); }
+.anycar-points { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; }
+.anycar-points li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.anycar-points svg { width: 14px; height: 14px; color: var(--red); }
+@media (max-width: 900px) {
+  .anycar { padding: 64px 0; }
+  .anycar .container { grid-template-columns: 1fr; gap: 34px; }
+  .anycar-brands span { padding: 9px 14px; font-size: 12px; }
+}
+@media (max-width: 560px) {
+  .anycar-actions .btn { flex: 1 1 100%; }
+}

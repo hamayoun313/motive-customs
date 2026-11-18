@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customise My Car | Motive Customs</title>
+<meta name="description" content="Build your custom quote: ambient lighting, body kits, DRLs, decals, caliper painting and exhausts for any make or model, supplied and installed by Motive Customs in Dandenong VIC.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="brand"><img src="images/logo.jpg" alt="Motive Customs"> MOTIVE <span>CUSTOMS</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="shop.html">Shop</a>
+      <a href="customise.html" class="active">Customise</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-outline btn-sm">Find Us</a>
+      <a href="quote.html" class="btn btn-primary btn-sm">Get A Quote</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="customise.html">Customise</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-primary">Get A Quote</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Customise My Car</span></div>
+    <h1>Customise your car, any make, any model.</h1>
+    <p>Pick your car, choose your upgrades and tell us the look you're after. We'll come back with a fitted, itemised quote in AUD, usually within 48 hours.</p>
+  </div>
+</section>
+
+<section class="section section-black cz-section">
+  <div class="container">
+    <div class="cz-layout">
+
+      <div class="form-panel cz-panel">
+        <ol class="cz-progress" aria-label="Steps">
+          <li class="active" data-step-dot="1"><span>1</span><em>Your Car</em></li>
+          <li data-step-dot="2"><span>2</span><em>Upgrades</em></li>
+          <li data-step-dot="3"><span>3</span><em>Style</em></li>
+          <li data-step-dot="4"><span>4</span><em>Your Details</em></li>
+        </ol>
+
+        <form data-form id="cz-form" action="https://formsubmit.co/ajax/mehdibabayi2001@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Custom Build Request — Motive Customs">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="Upgrades" id="cz-upgrades">
+
+          <fieldset class="cz-step active" data-step="1">
+            <legend class="cz-step-title">Which car are we building?</legend>
+            <p class="cz-step-sub">Ambient lighting and body kits are available for every make and model, so if yours isn't listed, choose Other.</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cz-make">Make *</label>
+                <select id="cz-make" name="Make" required><option value="">Select make</option><option value="Toyota">Toyota</option><option value="Ford">Ford</option><option value="Mercedes-Benz">Mercedes-Benz</option><option value="BMW">BMW</option><option value="Audi">Audi</option><option value="Volkswagen">Volkswagen</option><option value="Hyundai">Hyundai</option><option value="Kia">Kia</option><option value="Mazda">Mazda</option><option value="Nissan">Nissan</option><option value="Mitsubishi">Mitsubishi</option><option value="Isuzu">Isuzu</option><option value="Holden">Holden</option><option value="Subaru">Subaru</option><option value="Lexus">Lexus</option><option value="Tesla">Tesla</option><option value="Honda">Honda</option><option value="Jeep">Jeep</option><option value="Land Rover">Land Rover</option><option value="Other">Other</option></select>
+              </div>
+              <div class="form-group">
+                <label for="cz-model">Model *</label>
+                <input type="text" id="cz-model" name="Model" required placeholder="e.g. Ranger Raptor, C300, Hilux">
+              </div>
+              <div class="form-group">
+                <label for="cz-year">Year</label>
+                <input type="text" id="cz-year" name="Year" inputmode="numeric" maxlength="4" placeholder="e.g. 2021">
+              </div>
+              <div class="form-group">
+                <label for="cz-variant">Variant / Trim</label>
+                <input type="text" id="cz-variant" name="Variant" placeholder="e.g. AMG Line, Wildtrak, SR5">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="cz-step" data-step="2">
+            <legend class="cz-step-title">What would you like done?</legend>
+            <p class="cz-step-sub">Select as many as you like. Every upgrade is supplied and installed by our team.</p>
+            <div class="cz-group"><div class="cz-group-title">Lighting</div><div class="cz-tiles"><label class="cz-tile"><input type="checkbox" data-upgrade="Ambient Lighting" data-key="ambient"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Ambient Lighting</span><span class="cz-tile-sub">Footwells, doors, dash, app-controlled</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Starlight Door Strips" data-key="starlight"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Starlight Door Strips</span><span class="cz-tile-sub">Fibre-optic starlight trims</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="RGB DRL Headlights" data-key="drl"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">RGB DRL Headlights</span><span class="cz-tile-sub">Colour-changing daytime lights</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Spotlights &amp; Light Bars" data-key="spotlights"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Spotlights &amp; Light Bars</span><span class="cz-tile-sub">Bonnet, roof or bumper mount</span></span></label></div></div><div class="cz-group"><div class="cz-group-title">Body Kit &amp; Styling</div><div class="cz-tiles"><label class="cz-tile"><input type="checkbox" data-upgrade="Front Lip / Splitter" data-key="lip"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Front Lip / Splitter</span><span class="cz-tile-sub">Lower, wider front stance</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Rear Spoiler" data-key="spoiler"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Rear Spoiler</span><span class="cz-tile-sub">Boot or tailgate spoiler</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Rear Diffuser" data-key="diffuser"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Rear Diffuser</span><span class="cz-tile-sub">Sharper rear end, tip options</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Grille Upgrade" data-key="grille"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Grille Upgrade</span><span class="cz-tile-sub">GT, mesh or blacked-out</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Side Skirts" data-key="skirts"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Side Skirts</span><span class="cz-tile-sub">Complete the kit side profile</span></span></label></div></div><div class="cz-group"><div class="cz-group-title">Finishing Touches</div><div class="cz-tiles"><label class="cz-tile"><input type="checkbox" data-upgrade="Decals &amp; Stripes" data-key="decals"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Decals &amp; Stripes</span><span class="cz-tile-sub">Custom-cut vinyl graphics</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Caliper Painting" data-key="calipers"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Caliper Painting</span><span class="cz-tile-sub">Any colour, heat-resistant</span></span></label><label class="cz-tile"><input type="checkbox" data-upgrade="Exhaust System" data-key="exhaust"><span class="cz-tile-box"><span class="cz-tile-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cz-tile-name">Exhaust System</span><span class="cz-tile-sub">Cat-back or full system</span></span></label></div></div>
+          </fieldset>
+
+          <fieldset class="cz-step" data-step="3">
+            <legend class="cz-step-title">Set the style.</legend>
+            <p class="cz-step-sub">Not sure yet? Leave these blank and we'll suggest what suits your car.</p>
+            <div class="form-group full">
+              <label>Body kit finish</label>
+              <div class="cz-chips" data-chip-group="Finish"><label class="cz-chip"><input type="radio" name="Finish" value="Gloss Black"><span>Gloss Black</span></label><label class="cz-chip"><input type="radio" name="Finish" value="Carbon Look"><span>Carbon Look</span></label><label class="cz-chip"><input type="radio" name="Finish" value="Colour-Matched"><span>Colour-Matched</span></label><label class="cz-chip"><input type="radio" name="Finish" value="Chrome / Silver"><span>Chrome / Silver</span></label><label class="cz-chip"><input type="radio" name="Finish" value="Not Sure"><span>Not Sure</span></label></div>
+            </div>
+            <div class="form-group full">
+              <label>Lighting colour</label>
+              <div class="cz-chips" data-chip-group="Lighting Colour"><label class="cz-chip"><input type="radio" name="Lighting Colour" value="Full RGB (app-controlled)"><span>Full RGB (app-controlled)</span></label><label class="cz-chip"><input type="radio" name="Lighting Colour" value="Single Colour"><span>Single Colour</span></label><label class="cz-chip"><input type="radio" name="Lighting Colour" value="Match My Interior"><span>Match My Interior</span></label><label class="cz-chip"><input type="radio" name="Lighting Colour" value="Not Sure"><span>Not Sure</span></label></div>
+            </div>
+            <div class="form-group full">
+              <label>Budget (AUD)</label>
+              <div class="cz-chips" data-chip-group="Budget"><label class="cz-chip"><input type="radio" name="Budget" value="Under $500"><span>Under $500</span></label><label class="cz-chip"><input type="radio" name="Budget" value="$500 – $1,000"><span>$500 – $1,000</span></label><label class="cz-chip"><input type="radio" name="Budget" value="$1,000 – $2,500"><span>$1,000 – $2,500</span></label><label class="cz-chip"><input type="radio" name="Budget" value="$2,500+"><span>$2,500+</span></label><label class="cz-chip"><input type="radio" name="Budget" value="Not Sure"><span>Not Sure</span></label></div>
+            </div>
+            <div class="form-group full">
+              <label for="cz-notes">Describe the look you're after</label>
+              <textarea id="cz-notes" name="Notes" placeholder="e.g. Purple ambient lighting in the doors and footwells, gloss black lip and diffuser, keep it subtle..."></textarea>
+            </div>
+            <div class="form-group full">
+              <label for="cz-photos">Photos of your car (optional)</label>
+              <input type="file" id="cz-photos" name="photos" multiple accept="image/*">
+            </div>
+          </fieldset>
+
+          <fieldset class="cz-step" data-step="4">
+            <legend class="cz-step-title">Where should we send your quote?</legend>
+            <p class="cz-step-sub">We'll reply with an itemised quote in AUD, including parts and installation.</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cz-name">Full Name *</label>
+                <input type="text" id="cz-name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="cz-email">Email *</label>
+                <input type="email" id="cz-email" name="email" required autocomplete="email" placeholder="you@email.com">
+              </div>
+              <div class="form-group">
+                <label for="cz-phone">Phone</label>
+                <input type="tel" id="cz-phone" name="phone" autocomplete="tel" placeholder="04XX XXX XXX">
+              </div>
+              <div class="form-group">
+                <label for="cz-contact">Best way to reach you</label>
+                <select id="cz-contact" name="Preferred Contact"><option>Phone call</option><option>Text message</option><option>Email</option></select>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="cz-hint" id="cz-hint" role="alert"></p>
+
+          <div class="cz-nav">
+            <button type="button" class="btn btn-outline" id="cz-back">Back</button>
+            <button type="button" class="btn btn-primary" id="cz-next">Next Step</button>
+            <button type="submit" class="btn btn-primary" id="cz-submit">Send My Build</button>
+          </div>
+          <p class="form-error">Something went wrong sending this — please try again, or email us directly at <a href="mailto:mehdibabayi2001@gmail.com">mehdibabayi2001@gmail.com</a>.</p>
+          <p class="form-note">By submitting, you agree to be contacted by Motive Customs about your request. We never share your information.</p>
+        </form>
+
+        <div class="form-success">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Build Request Received</h3>
+          <p>Thanks — we've got your car and upgrade list. We'll come back with an itemised quote, usually within 48 hours.</p>
+          <a href="shop.html" class="btn btn-outline">Browse The Shop</a>
+        </div>
+      </div>
+
+      <aside class="cz-summary" aria-live="polite">
+        <div class="cz-summary-inner">
+          <div class="eyebrow">Your Build</div>
+          <div class="cz-sum-car" id="cz-sum-car">Choose your car</div>
+          <div class="cz-sum-label">Upgrades</div>
+          <ul class="cz-sum-list" id="cz-sum-list"><li class="empty">None selected yet</li></ul>
+          <div class="cz-sum-label">Style</div>
+          <ul class="cz-sum-list" id="cz-sum-style"><li class="empty">We'll suggest a style</li></ul>
+          <ul class="cz-sum-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Any make or model</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Supplied &amp; installed in-house</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Itemised AUD quote, no obligation</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="images/logo.jpg" alt="Motive Customs"> MOTIVE <span>CUSTOMS</span></a>
+        <p>Premium automotive customization — lighting, body kits, decals &amp; graphics and brake caliper painting, built in-house.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/motivecustoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.facebook.com/share/19xbVZXygR/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2a4 4 0 00-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.tiktok.com/@motivecustoms" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 11-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#lighting">Lighting</a></li>
+          <li><a href="services.html#body-kits">Body Kits</a></li>
+          <li><a href="services.html#wraps">Decals &amp; Graphics</a></li>
+          <li><a href="services.html#calipers">Caliper Painting</a></li>
+          <li><a href="services.html#exhaust">Exhaust Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+61469821658">0469 821 658</a></li>
+          <li><a href="mailto:mehdibabayi2001@gmail.com">mehdibabayi2001@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=21+Ingrid+Street%2C+Dandenong+VIC+3175" target="_blank" rel="noopener noreferrer">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Motive Customs. All rights reserved.</span>
+      <span>Built for drivers who don't settle.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/customise.js"></script>
+</body>
+</html>

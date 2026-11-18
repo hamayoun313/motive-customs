@@ -17,6 +17,7 @@
   var qtyMinus = document.getElementById('pm-qty-minus');
   var qtyPlus = document.getElementById('pm-qty-plus');
 
+  var inquireLabel = inquireBtn.textContent;
   var state = { baseName: '', basePrice: '', qty: 1, variant: null };
 
   function openModal(card) {
@@ -39,6 +40,8 @@
     state.baseName = inquireSrc ? inquireSrc.getAttribute('data-quote-product') : (title ? title.textContent : '');
     state.basePrice = price ? price.textContent : '';
     state.qty = 1;
+    state.inquireUrl = card.getAttribute('data-inquire-url');
+    inquireBtn.textContent = state.inquireUrl ? 'Customise My Car' : inquireLabel;
     qtyValEl.textContent = '1';
 
     variantsEl.innerHTML = '';
@@ -77,7 +80,7 @@
 
   document.querySelectorAll('.product-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
-      if (e.target.closest('[data-quote-product]')) return; // let the existing Inquire button behave as before
+      if (e.target.closest('[data-quote-product], a[href]')) return; // let the existing Inquire button behave as before
       openModal(card);
     });
   });
@@ -100,6 +103,7 @@
   });
 
   inquireBtn.addEventListener('click', function () {
+    if (state.inquireUrl) { window.location.href = state.inquireUrl; return; }
     var parts = [state.baseName];
     if (state.variant) parts.push('(' + state.variant + ')');
     if (state.qty > 1) parts.push('x' + state.qty);
