@@ -119,23 +119,18 @@ document.addEventListener('DOMContentLoaded', () => {
           body: new FormData(form),
           headers: { Accept: 'application/json' }
         });
-        const data = await response.json().catch(() => ({}));
-        if (!response.ok || data.success === 'false' || data.success === false) {
-          const needsActivation = /activation/i.test(data.message || '');
-          const msg = needsActivation
-            ? "This inbox needs one-time activation: check it for an email from FormSubmit and click \"Activate Form\", then submit this again."
-            : (data.message || "Something went wrong sending this — please try again, or email us directly.");
-          throw new Error(msg);
+        const data = await response.json();
+        if (!response.ok || (data?.success !== true && data?.success !== 'true')) {
+          throw new Error('FormSubmit did not confirm the submission');
         }
 
         form.style.display = 'none';
         if (success) success.classList.add('show');
-      } catch (err) {
+      } catch {
         if (errorBox) {
-          errorBox.textContent = err.message || errorBox.textContent;
           errorBox.classList.add('show');
         } else {
-          alert(err.message || "Something went wrong sending this — please email us directly or try again.");
+          alert("We couldn’t send your request. Please try again or email us directly.");
         }
         if (submitBtn) {
           submitBtn.disabled = false;
